@@ -1,3 +1,8 @@
+Auth
+
+<img width="779" alt="3" src="https://github.com/user-attachments/assets/d7d0540d-313c-4e3d-818a-a3a464262ee9" />
+<img width="959" alt="2" src="https://github.com/user-attachments/assets/ad53eccf-cb64-4c55-b3a2-471280f8a33f" />
+<img width="959" alt="1" src="https://github.com/user-attachments/assets/f1562166-e33a-4ae4-9a7a-696cffa32c23" />
 
 # Vania Dart backend framework
 

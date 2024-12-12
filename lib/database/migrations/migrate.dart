@@ -7,11 +7,8 @@ import 'createorderitemstable.dart';
 import 'createvendorstable.dart';
 import 'createproductstable.dart';
 import 'createproductnotestable.dart';
-<<<<<<< HEAD
 import 'createUser.dart';
 import 'createAccessToken.dart';
-=======
->>>>>>> 8ce20af5e0bbb0a7f48809ae3cd4fd7bd11f199b
 
 void main(List<String> args) async {
   print('=============================');
@@ -49,7 +46,6 @@ class Migrate {
   /// Mendaftarkan migrasi
   Future<void> registry() async {
   try {
-<<<<<<< HEAD
 
     await CreateUserTable().up();
     print('Table "user" migrated.');
@@ -57,8 +53,6 @@ class Migrate {
     await CreatePersonalAccessTokensTable().up();
     print('Table "access token" migrated.');
 
-=======
->>>>>>> 8ce20af5e0bbb0a7f48809ae3cd4fd7bd11f199b
     await CreateCustomersTable().up();
     print('Table "customers" migrated.');
 
@@ -76,12 +70,9 @@ class Migrate {
 
     await CreateProductNotesTable().up();
     print('Table "product_notes" migrated.');
-<<<<<<< HEAD
 
   
 
-=======
->>>>>>> 8ce20af5e0bbb0a7f48809ae3cd4fd7bd11f199b
   } catch (e) {
     print('Error during migration: $e');
   }
@@ -108,15 +99,12 @@ class Migrate {
 
     await CreateCustomersTable().down();
     print('Table "customers" dropped.');
-<<<<<<< HEAD
 
     await CreateUserTable().down();
     print('Table "user" migrated.');
 
     await CreatePersonalAccessTokensTable().down();
     print('Table "access token" migrated.');
-=======
->>>>>>> 8ce20af5e0bbb0a7f48809ae3cd4fd7bd11f199b
   } catch (e) {
     print('Error during dropping tables: $e');
   }

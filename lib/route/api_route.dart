@@ -4,7 +4,10 @@ import 'package:order_entry/app/http/controllers/orders_controller.dart';
 import 'package:order_entry/app/http/controllers/orderitems_controller.dart';
 import 'package:order_entry/app/http/controllers/products_controller.dart';
 import 'package:order_entry/app/http/controllers/productnotes_controller.dart';
+import 'package:order_entry/app/http/controllers/auth_controller.dart';
 import 'package:order_entry/app/http/controllers/vendors_controller.dart';
+import 'package:order_entry/app/http/middleware/authenticate.dart';
+import 'package:order_entry/app/http/middleware/error_response_middleware.dart';
 
 class ApiRoute implements Route {
   @override
@@ -113,6 +116,17 @@ class ApiRoute implements Route {
 
     // Delete vendor by ID
     Router.delete("/vendors/{id}", vendorController.deleteVendor);
+
+    Router.group(
+      () {
+        Router.post('login', authController.login);
+        Router.post('register', authController.signUp);
+        Router.post('refresh-token', authController.refreshToken);
+        Router.get('wrong-request', () => Response.json({})).middleware([ErrorResponseMiddleware()]);
+
+      },
+      prefix: 'auth'
+    );
 
 
 

@@ -19,28 +19,6 @@ class CustomerController extends Controller {
     }
   }
 
-//   /// Mendapatkan data customer berdasarkan ID
-//   Future<Response> getCustomerById(Request request, String id) async {
-//   try {
-//     final customer = await Customer().find(id);
-
-//     if (customer == null) {
-//       return Response.json({
-//         "message": "Customer dengan ID: $id tidak ditemukan",
-//       }, 404);
-//     }
-
-//     return Response.json({
-//       "message": "Berhasil mendapatkan data customer",
-//       "data": customer.toMap(),
-//     }, 200);
-//   } catch (e) {
-//     return Response.json({
-//       "message": "Gagal mendapatkan customer dengan ID: $id",
-//       "error": e.toString(),
-//     }, 500);
-//   }
-// }
 
 
   /// Membuat data customer baru
@@ -177,70 +155,5 @@ Future<Response> deleteCustomer(Request request, String id) async {
 }
 
 
-
-
-
-
-//   /// Memperbarui data customer berdasarkan ID
-//   Future<Response> updateCustomer(Request request, String id) async {
-//   try {
-//     final customer = await Customer().find(id);
-
-//     if (customer == null) {
-//       return Response.json({
-//         "message": "Customer dengan ID: $id tidak ditemukan",
-//       }, 404);
-//     }
-
-//     final input = await request.input();
-//     customer
-//       ..custName = input['cust_name'] ?? customer.custName
-//       ..custAddress = input['cust_address'] ?? customer.custAddress
-//       ..custCity = input['cust_city'] ?? customer.custCity
-//       ..custState = input['cust_state'] ?? customer.custState
-//       ..custZip = input['cust_zip'] ?? customer.custZip
-//       ..custCountry = input['cust_country'] ?? customer.custCountry
-//       ..custTelp = input['cust_telp'] ?? customer.custTelp;
-
-//     await customer.save();
-
-//     return Response.json({
-//       "message": "Customer berhasil diperbarui",
-//       "data": customer.toMap(),
-//     }, 200);
-//   } catch (e) {
-//     return Response.json({
-//       "message": "Gagal memperbarui customer dengan ID: $id",
-//       "error": e.toString(),
-//     }, 500);
-//   }
-// }
-
-
-//   /// Menghapus data customer berdasarkan ID
-//   Future<Response> deleteCustomer(Request request, String id) async {
-//   try {
-//     // Cari data customer berdasarkan ID
-//     final customer = await Customer().find(id);
-
-//     if (customer == null) {
-//       return Response.json({
-//         "message": "Customer dengan ID: $id tidak ditemukan",
-//       }, 404);
-//     }
-
-//     // Hapus data
-//     await customer.delete();
-
-//     return Response.json({
-//       "message": "Customer dengan ID: $id berhasil dihapus",
-//     }, 200);
-//   } catch (e) {
-//     return Response.json({
-//       "message": "Gagal menghapus customer dengan ID: $id",
-//       "error": e.toString(),
-//     }, 500);
-//   }
-// }
 
 }
